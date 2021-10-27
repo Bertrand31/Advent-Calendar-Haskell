@@ -1,4 +1,4 @@
-module Day4 (day4) where
+module Day42 (day42) where
 
 import System.IO
 import qualified Data.List as List
@@ -33,7 +33,7 @@ countValidPassports rows =
   let passports = (fmap makePassport) $ splitChunks rows
    in length $ filter validatePassport passports
 
-day4 :: IO ()
-day4 = do
+day42 :: IO ()
+day42 = do
   contents <- readFile "input-day4.txt"
   putStrLn $ "Day 4: " ++ (show . countValidPassports $ lines contents)
